@@ -1,0 +1,90 @@
+{
+  "version": 3,
+  "targets": {
+    "net5.0": {
+      "ProEventos.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/ProEventos.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ProEventos.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ProEventos.Domain/1.0.0": {
+      "type": "project",
+      "path": "../ProEventos.Domain/ProEventos.Domain.csproj",
+      "msbuildProject": "../ProEventos.Domain/ProEventos.Domain.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    "net5.0": [
+      "ProEventos.Domain >= 1.0.0"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\eduar\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Aprendendo CSharp\\Praticando\\ProEventos\\Back\\src\\ProEventos.API\\ProEventos.Shared\\ProEventos.Shared.csproj",
+      "projectName": "ProEventos.Shared",
+      "projectPath": "C:\\Aprendendo CSharp\\Praticando\\ProEventos\\Back\\src\\ProEventos.API\\ProEventos.Shared\\ProEventos.Shared.csproj",
+      "packagesPath": "C:\\Users\\eduar\\.nuget\\packages\\",
+      "outputPath": "C:\\Aprendendo CSharp\\Praticando\\ProEventos\\Back\\src\\ProEventos.API\\ProEventos.Shared\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\eduar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "net5.0"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "projectReferences": {
+            "C:\\Aprendendo CSharp\\Praticando\\ProEventos\\Back\\src\\ProEventos.API\\ProEventos.Domain\\ProEventos.Domain.csproj": {
+              "projectPath": "C:\\Aprendendo CSharp\\Praticando\\ProEventos\\Back\\src\\ProEventos.API\\ProEventos.Domain\\ProEventos.Domain.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "net5.0": {
+        "targetAlias": "net5.0",
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}

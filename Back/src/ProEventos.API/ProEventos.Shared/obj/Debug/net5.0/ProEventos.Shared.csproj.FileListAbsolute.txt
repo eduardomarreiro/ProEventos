@@ -1,0 +1,15 @@
+C:\Aprendendo CSharp\Praticando\ProEventos\Back\src\ProEventos.API\ProEventos.Shared\bin\Debug\net5.0\ProEventos.Shared.deps.json
+C:\Aprendendo CSharp\Praticando\ProEventos\Back\src\ProEventos.API\ProEventos.Shared\bin\Debug\net5.0\ProEventos.Shared.dll
+C:\Aprendendo CSharp\Praticando\ProEventos\Back\src\ProEventos.API\ProEventos.Shared\bin\Debug\net5.0\ProEventos.Shared.pdb
+C:\Aprendendo CSharp\Praticando\ProEventos\Back\src\ProEventos.API\ProEventos.Shared\obj\Debug\net5.0\ProEventos.Shared.GeneratedMSBuildEditorConfig.editorconfig
+C:\Aprendendo CSharp\Praticando\ProEventos\Back\src\ProEventos.API\ProEventos.Shared\obj\Debug\net5.0\ProEventos.Shared.AssemblyInfoInputs.cache
+C:\Aprendendo CSharp\Praticando\ProEventos\Back\src\ProEventos.API\ProEventos.Shared\obj\Debug\net5.0\ProEventos.Shared.AssemblyInfo.cs
+C:\Aprendendo CSharp\Praticando\ProEventos\Back\src\ProEventos.API\ProEventos.Shared\obj\Debug\net5.0\ProEventos.Shared.csproj.CoreCompileInputs.cache
+C:\Aprendendo CSharp\Praticando\ProEventos\Back\src\ProEventos.API\ProEventos.Shared\obj\Debug\net5.0\ProEventos.Shared.dll
+C:\Aprendendo CSharp\Praticando\ProEventos\Back\src\ProEventos.API\ProEventos.Shared\obj\Debug\net5.0\ref\ProEventos.Shared.dll
+C:\Aprendendo CSharp\Praticando\ProEventos\Back\src\ProEventos.API\ProEventos.Shared\obj\Debug\net5.0\ProEventos.Shared.pdb
+C:\Aprendendo CSharp\Praticando\ProEventos\Back\src\ProEventos.API\ProEventos.Shared\obj\Debug\net5.0\ProEventos.Shared.csproj.AssemblyReference.cache
+C:\Aprendendo CSharp\Praticando\ProEventos\Back\src\ProEventos.API\ProEventos.Shared\bin\Debug\net5.0\ProEventos.Domain.dll
+C:\Aprendendo CSharp\Praticando\ProEventos\Back\src\ProEventos.API\ProEventos.Shared\bin\Debug\net5.0\ProEventos.Domain.pdb
+C:\Aprendendo CSharp\Praticando\ProEventos\Back\src\ProEventos.API\ProEventos.Shared\obj\Debug\net5.0\ProEventos.Shared.csproj.CopyComplete
+C:\Aprendendo CSharp\Praticando\ProEventos\Back\src\ProEventos.API\ProEventos.Shared\obj\Debug\net5.0\refint\ProEventos.Shared.dll

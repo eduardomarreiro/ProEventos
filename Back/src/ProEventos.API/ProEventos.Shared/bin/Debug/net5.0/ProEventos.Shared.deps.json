@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "ProEventos.Shared/1.0.0": {
+        "dependencies": {
+          "ProEventos.Domain": "1.0.0"
+        },
+        "runtime": {
+          "ProEventos.Shared.dll": {}
+        }
+      },
+      "ProEventos.Domain/1.0.0": {
+        "runtime": {
+          "ProEventos.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ProEventos.Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "ProEventos.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "9a900124-e944-4cfe-b7bd-0f1deb55b7d3": {
+      "ProjectGuid": "9a900124-e944-4cfe-b7bd-0f1deb55b7d3",
+      "DisplayName": "ProEventos.API",
+      "ColorIndex": 0
+    },
+    "a491697f-bf87-42df-84d9-2707541f53c1": {
+      "ProjectGuid": "a491697f-bf87-42df-84d9-2707541f53c1",
+      "DisplayName": "ProEventos.Application",
+      "ColorIndex": 1
+    },
+    "9762ed5b-eb33-4bb1-89b1-84ce875f712a": {
+      "ProjectGuid": "9762ed5b-eb33-4bb1-89b1-84ce875f712a",
+      "DisplayName": "Pçgfkjnhçpkjnfb´roEventos.Data",
+      "ColorIndex": 2
+    },
+    "1bf934e7-9f2a-4472-9e0a-5c4248c4050d": {
+      "ProjectGuid": "1bf934e7-9f2a-4472-9e0a-5c4248c4050d",
+      "DisplayName": "ProEventos.Data",
+      "ColorIndex": 3
+    },
+    "6fe59013-c9d4-473f-87d9-2db0c542a814": {
+      "ProjectGuid": "6fe59013-c9d4-473f-87d9-2db0c542a814",
+      "DisplayName": "ProEventos.Domain",
+      "ColorIndex": 4
+    },
+    "518c9146-df50-405c-8728-826b35199562": {
+      "ProjectGuid": "518c9146-df50-405c-8728-826b35199562",
+      "DisplayName": "ProEventos.Shared",
+      "ColorIndex": 5
+    }
+  },
+  "NextColorIndex": 6
+}
