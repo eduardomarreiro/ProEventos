@@ -1,23 +1,38 @@
 <app-titulo [titulo]="'Eventos'"
             [iconClass]="'fa fa-calendar-alt'"
-            [botaoListar]="true"></app-titulo>
-<hr>
-<div class="form-inline">
-  <div class="form-group mb-2">
-    <label class="mr-2"> Filtro: </label>
-    <input
-    type="text"
-    class="form-control mr-2"
-    placeholder="buscar"
-    [(ngModel)]="filtroLista"
-    >
+            [botaoListar]="true">
+</app-titulo>
+
+<div class="card rounded shadow-sm p-3 ">
+
+<div class="d-flex">
+  <div  class="flex-fill pr-3">
+    <div class="input-group mb-2">
+      <div class="input-group-prepended">
+        <div class="input-group-text"> Filtro: </div>
+      </div>
+
+      <input
+      type="text"
+      class="form-control"
+      placeholder="buscar por tema ou local"
+      [(ngModel)]="filtroLista"
+      >
+    </div>
   </div>
+  <div>
+    <a class="d-flex btn btn-btn-outline-primary" href="#">
+      <i class="fa fa-plus-circle my-1"></i>
+      <b class="ml-1 d-none d-sm-block">Novo</b>
+    </a>
+  </div>
+
 </div>
 <!--<h3> Filtro: {{filtroLista}}</h3>-->
 <table class="table table-striped">
   <thead class="thead-dark">
     <tr>
-      <th>
+      <th class="d-none d-md-table-cell">
         <button type="button" class="btn btn-outline-light btn-sm"
         (click)="alterarImagem()">
         <i class="{{!exibirImagem ? 'fa fa-eye' : 'fa fa-eye-slash'}}"></i>
@@ -26,16 +41,16 @@
       </th>
       <th>#</th>
       <th>Tema</th>
-      <th>Local</th>
+      <th class="d-none d-md-table-cell">Local</th>
       <th>Data</th>
-      <th>Quantidade de pessoas</th>
-      <th>Lote</th>
+      <th class="d-none d-md-table-cell">Quantidade de pessoas</th>
+      <th class="d-none d-md-table-cell">Lote</th>
       <th>Opções</th>
     </tr>
   </thead>
   <tbody *ngIf="eventos && eventos.length">
     <tr *ngFor="let evento of eventosFiltrados">
-      <td>
+      <td class="d-none d-md-table-cell">
           <img [collapse] ="!exibirImagem"
                [isAnimated]="true"
             src="/assets/{{evento.imagemURL}}"
@@ -45,16 +60,12 @@
       </td>
       <td>{{evento.id}}</td>
       <td>{{evento.tema}}</td>
-      <td>{{evento.local}}</td>
+      <td class="d-none d-md-table-cell">{{evento.local}}</td>
       <td>{{evento.dataDoEvento | DateTimeFormat}}</td>
-      <td>{{evento.quantidadeDePessoas}}</td>
-      <td>{{evento.lotes[0].nome}}</td>
+      <td class="d-none d-md-table-cell">{{evento.quantidadeDePessoas}}</td>
+      <td class="d-none d-md-table-cell">{{evento.lotes[0].nome}}</td>
       <td>
-        <button type="button" class="btn btn-primary btn-sm mr-2" tooltip="Editar" (click)="openModal(template)">
-        <i class="fa fa-edit"></i>
-
-        </button>
-        <button type="button" class="btn btn-danger btn-sm" tooltip="Excluir" (click)="openModal(template)">
+        <button type="button" class="btn btn-danger btn-lg" tooltip="Excluir" (click)="openModal(template)">
 
         <i class="fa fa-trash"></i>
         </button>
@@ -69,6 +80,8 @@
     </tr>
   </tfoot>
 </table>
+
+</div>
 <ng-template #template>
   <div class="modal-body text-center">
     <p>Tem certeza que quer deletar esse Evento?</p>
