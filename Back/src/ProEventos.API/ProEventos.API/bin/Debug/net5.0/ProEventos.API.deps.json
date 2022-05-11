@@ -33,6 +33,7 @@
     ".NETCoreApp,Version=v5.0": {
       "ProEventos.API/1.0.0": {
         "dependencies": {
+          "AutoMapper.Extensions.Microsoft.DependencyInjection": "11.0.0",
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "5.0.13",
           "Microsoft.EntityFrameworkCore": "5.0.13",
           "Microsoft.EntityFrameworkCore.Tools": "5.0.13",
@@ -1421,7 +1422,6 @@
       "ProEventos.Data/1.0.0": {
         "dependencies": {
           "AutoMapper": "11.0.1",
-          "AutoMapper.Extensions.Microsoft.DependencyInjection": "11.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.13",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.13",
           "ProEventos.Domain": "1.0.0",

@@ -1,10 +1,10 @@
-﻿using ProEventos.Domain.Interfaces.IRepository;
-using ProEventos.Domain.Interfaces.IService;
+﻿using AutoMapper;
+using ProEventos.Application.Dtos;
+using ProEventos.Application.Interfaces.IService;
+using ProEventos.Domain.Interfaces.IRepository;
 using ProEventos.Domain.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace ProEventos.Application.Services
@@ -13,22 +13,30 @@ namespace ProEventos.Application.Services
     {
         private readonly IEventoRepository _eventoRepo;
         private readonly IRepository _repo;
+        private readonly IMapper _mapper;
 
-        public EventoService(IEventoRepository eventoRepo, IRepository repo)
+        public EventoService(IEventoRepository eventoRepo, IRepository repo, IMapper mapper)
         {
             _eventoRepo = eventoRepo;
             _repo = repo;
+            _mapper = mapper;
         }
-        public async Task<Evento> AddEvento(Evento model)
+        public async Task<EventoDto> AddEvento(EventoDto model)
         {
             try
             {
-                _repo.Add<Evento>(model);
-                if(await _repo.SavaChangesAsync())
+                var evento = _mapper.Map<Evento>(model);
+
+                _repo.Add<Evento>(evento);
+
+                if (await _repo.SavaChangesAsync())
                 {
-                    return await _eventoRepo.GetEventosByIdAsync(model.Id, false);
+                    var eventoRetorno = await _eventoRepo.GetEventosByIdAsync(evento.Id, false);
+
+                    return _mapper.Map<EventoDto>(eventoRetorno);
                 }
                 return null;
+
             }
             catch (Exception ex)
             {
@@ -37,7 +45,7 @@ namespace ProEventos.Application.Services
             }
         }
 
-        public async Task<Evento> UpdateEvento(int eventoId, Evento model)
+        public async Task<EventoDto> UpdateEvento(int eventoId, EventoDto model)
         {
             try
             {
@@ -46,10 +54,15 @@ namespace ProEventos.Application.Services
 
                 model.Id = evento.Id;
 
-                _repo.Update(model);
+                _mapper.Map(model, evento);
+
+                _repo.Update<Evento>(evento);
+
                 if (await _repo.SavaChangesAsync())
                 {
-                    return await _eventoRepo.GetEventosByIdAsync(evento.Id, false);
+                    var eventoRetorno = await _eventoRepo.GetEventosByIdAsync(evento.Id, false);
+
+                    return _mapper.Map<EventoDto>(eventoRetorno);
                 }
                 return null;
             }
@@ -77,14 +90,18 @@ namespace ProEventos.Application.Services
             }
         }
 
-        public async Task<Evento[]> GetAllEventosAsync(bool includePalestrantes = false)
+        public async Task<EventoDto[]> GetAllEventosAsync(bool includePalestrantes = false)
         {
             try
             {
                 var eventos = await _eventoRepo.GetAllEventosAsync(includePalestrantes);
                 if (eventos == null) return null;
 
-                return eventos;
+                var eventosRetorno = new List<EventoDto>();
+
+                var resultado = _mapper.Map<EventoDto[]>(eventos);
+
+                return resultado;
             }
             catch (Exception ex)
             {
@@ -93,14 +110,16 @@ namespace ProEventos.Application.Services
             }
         }
 
-        public async Task<Evento[]> GetAllEventosByTemaAsync(string tema, bool includePalestrantes = false)
+        public async Task<EventoDto[]> GetAllEventosByTemaAsync(string tema, bool includePalestrantes = false)
         {
             try
             {
                 var eventos = await _eventoRepo.GetAllEventosByTemaAsync(tema, includePalestrantes);
                 if (eventos == null) return null;
 
-                return eventos;
+                var resultado = _mapper.Map<EventoDto[]>(eventos);
+
+                return resultado;
             }
             catch (Exception ex)
             {
@@ -109,14 +128,16 @@ namespace ProEventos.Application.Services
             }
         }
 
-        public async Task<Evento> GetEventosByIdAsync(int eventoId, bool includePalestrantes = false)
+        public async Task<EventoDto> GetEventosByIdAsync(int eventoId, bool includePalestrantes = false)
         {
             try
             {
                 var eventos = await _eventoRepo.GetEventosByIdAsync(eventoId, includePalestrantes);
                 if (eventos == null) return null;
 
-                return eventos;
+                var resultado = _mapper.Map<EventoDto>(eventos);
+
+                return resultado;
             }
             catch (Exception ex)
             {

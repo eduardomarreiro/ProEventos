@@ -1,22 +1,16 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using ProEventos.Application.Interfaces.IService;
 using ProEventos.Application.Services;
 using ProEventos.Data.Context;
 using ProEventos.Data.Repository;
 using ProEventos.Domain.Interfaces.IRepository;
-using ProEventos.Domain.Interfaces.IService;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace ProEventos.API
 {
@@ -32,6 +26,7 @@ namespace ProEventos.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddTransient<IEventoService, EventoService>();
             services.AddScoped<IEventoRepository, EventoRepository>();
             services.AddScoped<IRepository, Repository>();
